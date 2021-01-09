@@ -8,7 +8,9 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>LV140</title>
+
+
 
 
     <!-- Bootstrap core CSS -->
@@ -71,7 +73,7 @@
     </nav>
 
     <div class="mycontainer ">
-
+            <span id="sw"></span>
         <div class="row">
             <div class="col">
                 1 of 6 columns
@@ -246,7 +248,14 @@ $(".col6").flip({
   axis: 'x',
   trigger: 'hover'
 });
-              
+
+var x = "tu pantalla es de: " + screen.width + 'px';
+
+
+$("#sw").text(x);
+
+
+
         </script>
 </body>
 
