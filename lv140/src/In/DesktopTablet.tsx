@@ -34,7 +34,7 @@ class DesktopTablet extends React.Component<any, any> {
             itemToFlip: order
         });
     }
-    flipclick(order: number) {
+    flipClick(order: number) {
 
         if (this.state.order === order){
             order=0;
