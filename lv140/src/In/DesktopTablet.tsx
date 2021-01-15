@@ -35,7 +35,6 @@ class DesktopTablet extends React.Component<any, any> {
         });
     }
     flipClick(order: number) {
-
         if (this.state.itemToFlip === order){
             order=0;
         }
@@ -44,7 +43,6 @@ class DesktopTablet extends React.Component<any, any> {
         });
     }
     unflip() {
-        console.log('unflip');
         this.setState({
             itemToFlip: 0
         });
@@ -69,13 +67,15 @@ class DesktopTablet extends React.Component<any, any> {
                                     {item.type === "brand" && (
                                         <>
                                             <ReactCardFlip isFlipped={this.state.itemToFlip === item.order ? true : false} flipDirection="horizontal">
-                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.flip(item.order) }} onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="CardFront" >
+                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.flip(item.order) }} onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="brand-front" >
                                                     <div className="brand-year-desktop-tablet"><h2>{item.year}</h2></div>
                                                     <div className="brand-logo-desktop-tablet"><img className="logo" alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
                                                 </div>
 
-                                                <div onMouseOut={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }} className="CardBack">
-                                                    This is the back of the card.
+                                                <div onMouseOut={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}  onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="brand-back">
+                                                <div className="brand-year-desktop-tablet"><h2>back</h2></div>
+                                                    <div className="brand-logo-desktop-tablet"><img className="logo" alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
+                                               
                                                 </div>
                                             </ReactCardFlip>
                                         </>
