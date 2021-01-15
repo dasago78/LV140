@@ -96,7 +96,6 @@ h3{
   width: 162px;
 
   height: 220px;
-  z-index:-2;
   background-color: #ffffff;
   position: relative; 
 }
@@ -117,7 +116,10 @@ h3{
 
 
 /*brand*/
-
+.brand-front{
+  width: 100%;
+  height: 100%;
+}
 .brand-logo-desktop-tablet{
   margin-top:15px;
 }
@@ -131,10 +133,7 @@ h3{
 
 /*full image*/
 
-.full-image-desktop-tablet>img
-{
-  z-index:1;
-}
+
 
 /*info*/
 .info-title-desktop-tablet{

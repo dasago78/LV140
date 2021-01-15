@@ -18,14 +18,14 @@ class In extends React.Component<any, any> {
             <>
 
                 <div className="header">
-                    <div className="logo-lv"><img src="./img/logo.png" /></div>
+                    <div className="logo-lv"><img alt="LV140" title="LV140" src="./img/logo.png" /></div>
                 </div>
 
                 <div className="content">
-                    {this.state.windowWidth >= 670 && <DesktopTablet />}
+                    {this.state.windowWidth >= 370 && <DesktopTablet />}
 
            
-                    {this.state.windowWidth < 670 && <Mobile />}
+                    {this.state.windowWidth < 370 && <Mobile />}
                 </div>
             </>
         );
