@@ -1,0 +1,108 @@
+[
+    {
+        "order": 1,
+        "type": "brand",
+        "name": "correos",
+        "year": 1890,
+        "snake": "snake-bottom-clear"
+    
+    },
+    {
+        "order": 2,
+        "type": "brand",
+        "name": "santander",
+        "year": 1899,
+        "snake":"snake-bottom-clear"
+    },
+    {
+        "order": 3,
+        "type": "brand",
+        "name": "santander",
+        "year": 1899,
+        "snake":"snake-bottom-clear"
+    },
+    {
+        "order": 4,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-right"
+    },
+    {
+        "order": 5,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-left"
+    },
+    {
+        "order": 6,
+        "type": "full-image",
+        "snake": "snake-bottom-dark",
+        "image": "1888"
+    },
+    {
+        "order": 7,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-dark"
+    },
+    {
+        "order": 8,
+        "type": "void",
+        "snake": "snake-right"
+    },
+    {
+        "order": 9,
+        "type": "void",
+        "snake": "snake-left"
+    },
+    {
+        "order": 10,
+        "type": "full-image",
+        "snake": "snake-bottom-clear",
+        "image": "1881"
+    },
+    {
+        "order": 11,
+        "type": "info",
+        "title": "La Vanguardia cambia su sede",
+        "description": "Lorem ipsum si amet dolore amat si et fula",
+        "year": 1899,
+        "snake":"snake-bottom-clear"
+    },
+    {
+        "order": 12,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-right"
+    },
+    {
+        "order": 13,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-left"
+    },
+    {
+        "order": 14,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-dark"
+    },
+    {
+        "order": 15,
+        "type": "brand",
+        "name": "correos",
+        "year": 1899,
+        "snake": "snake-bottom-dark"
+    },
+    {
+        "order": 16,
+        "type": "void",
+        "snake": "snake-right"
+    }
+]

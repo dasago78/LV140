@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: TiemposHeadline;
+  src: url('TiemposHeadline-Light.otf');
+}
+@font-face {
+  font-family: TiemposHeadline;
+  src: url('TiemposHeadline-Bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: TiemposText;
+  src: url('TiemposText-Regular.otf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+body {
+  margin: 0;
+  font-family: TiemposText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 11px;
 }
+
+
+
+.header{
+  background-color: #001C4C!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 90px;
+}
+
+.logo-lv{
+    position: absolute;
+    left: 50%;
+    margin-top:7px;
+    margin-left: -92px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+
+h1{
+  font-size: 66px!important;
+  font-family: TiemposHeadline;
+  font-weight: bold;
+  color:#001C4C;
+  margin:0px;
+}
+
+h2{
+  font-size: 32px!important;
+  font-family: TiemposHeadline;
+  font-weight: bold;
+  color:#879bbd
+}
+
+h3{
+  font-size: 16px!important;
+  font-family: TiemposHeadline;
+  font-weight: bold;
+  color:#001C4C;
+}
+
+
+
+.content{
+  margin-top:100px;
+}
+
+
+.desktop-container{
+  width: 972px;
+  padding: 0px;
+  margin: 0 auto;
+}
+.tablet-container{
+  width: 648px;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.col-desktop-tablet {
+  margin: 0px;
+  padding: 0px;
+  width: 162px;
+
+  height: 220px;
+  z-index:-2;
+  background-color: #ffffff;
+  position: relative; 
+}
+
+
+
+
+
+/*items desktop tablet*/
+.item-container-desktop-tablet{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10px;
+ 
+}
+
+
+/*brand*/
+
+.brand-logo-desktop-tablet{
+  margin-top:15px;
+}
+
+.logo{
+  position: absolute;
+  left: 50%;
+  margin-left: -70px !important;  /* 50% of your logo width */
+  display: block;
+}
+
+/*full image*/
+
+.full-image-desktop-tablet>img
+{
+  z-index:1;
+}
+
+/*info*/
+.info-title-desktop-tablet{
+ margin-top:30px;
+}
+
+.info-description-desktop-tablet{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.info-year-desktop-tablet{
+  position: absolute; 
+  bottom: 0px; 
+  left:-15px;
+}
+
+
+
