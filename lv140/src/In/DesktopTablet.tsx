@@ -10,6 +10,7 @@ class DesktopTablet extends React.Component<any, any> {
 
         this.state = {
             data: [],
+            device: window.innerWidth >= 990 ? 'tablet' : 'tablet',
             itemToFlip: 0
         };
     }
@@ -18,29 +19,31 @@ class DesktopTablet extends React.Component<any, any> {
     componentDidMount() {
         var data = null;
 
-        window.innerWidth >= 990 ? data = dataDesktop : data = dataTablet
-
+        this.state.device === 'desktop' ? data = dataDesktop : data = dataTablet
 
         this.setState({
-            data: data, windowWidth: window.innerWidth
+            data: data
         });
 
 
     }
     flip(order: number) {
-
-        this.setState({
-            itemToFlip: order
-        });
-    }
-    flipClick(order: number) {
-        if (this.state.itemToFlip === order) {
-            order = 0;
+        if (this.state.device === 'desktop') {
+            this.setState({
+                itemToFlip: order
+            });
         }
-        this.setState({
-            itemToFlip: order
-        });
+        else{
+        
+            if (this.state.itemToFlip === order) {
+                order = 0;
+            }
+            this.setState({
+                itemToFlip: order
+            });
+        }
     }
+   
     unflip() {
 
         this.setState({
@@ -48,6 +51,9 @@ class DesktopTablet extends React.Component<any, any> {
         });
     }
 
+    nothing() {
+
+    }
 
 
     render() {
@@ -56,8 +62,7 @@ class DesktopTablet extends React.Component<any, any> {
 
         return (
             <>
-
-                <div className={this.state.windowWidth >= 990 ? "tablet-container" : "tablet-container"}>
+                <div className={this.state.device === 'desktop' ? "desktop-container" : "tablet-container"}>
                     <div className="row">
 
                         {this.state.data.map((item: any) =>
@@ -67,7 +72,7 @@ class DesktopTablet extends React.Component<any, any> {
                                     {item.type === "brand" && (
                                         <>
                                             <ReactCardFlip isFlipped={this.state.itemToFlip === item.order ? true : false} flipDirection="horizontal">
-                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.flip(item.order) }} onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="brand-front" >
+                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.state.device === 'desktop' ? this.flip(item.order) : this.nothing()}} onClick={(event: React.MouseEvent<HTMLElement>) => { this.state.device === 'tablet' ? this.flip(item.order) :this.nothing()}} className="brand-front" >
                                                     <div className="brand-year-desktop-tablet"><h2>{item.year}</h2></div>
                                                     <div className="brand-logo-desktop-tablet"><img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
                                                 </div>
@@ -111,7 +116,7 @@ class DesktopTablet extends React.Component<any, any> {
                                     {item.type === "void" && (
                                         <>
                                             <div className="full" onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}>
-                                              
+
                                             </div>
                                         </>
                                     )}
