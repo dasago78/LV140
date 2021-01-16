@@ -38,7 +38,7 @@ class Mobile extends React.Component<any, any> {
 
                                 {item.type === "snake" && (
                                     <>
-                                        <div className="col-snake-mobile" style={{ backgroundImage: "url('./img/snake/snake-mobile.png')" }}>
+                                        <div className="col-snake-mobile dashed-bottom" style={{ backgroundImage: "url('./img/snake/snake-mobile.png')" }}>
 
                                         </div>
                                     </>
@@ -47,7 +47,7 @@ class Mobile extends React.Component<any, any> {
 
                                 {item.type === "void" && (
                                     <>
-                                        <div className="col-mobile">
+                                        <div className="col-mobile  transparent dashed-bottom">
 
                                         </div>
                                     </>
@@ -56,13 +56,53 @@ class Mobile extends React.Component<any, any> {
 
                                 {item.type === "more" && (
                                     <>
-                                        <div className="col-mobile transparent">
+                                        <div className="col-mobile transparent dashed-bottom">
                                             <div className="more-mobile transparent">
-                                                <a href="" className="more-link-mobile">Saber más</a>
+                                                <a href={"/" + item.name} className="more-link-mobile">Saber más</a>
                                             </div>
                                         </div>
                                     </>
                                 )}
+
+
+                                {item.type === "full-image" && (
+                                    <>
+                                        <div className="col-mobile ">
+                                            <div className="full-image-image-mobile">
+                                                <img alt={item.image} title={item.image} src={"./img/full-images/" + item.image + ".png"} />
+                                            </div>
+
+                                        </div>
+                                    </>
+                                )}
+
+
+                                {item.type === "info" && (
+                                    <>
+                                        <div className="col-mobile dashed-bottom">
+                                            <div className="info-year-mobile"><h1 className="mobileh1">{item.year}</h1></div>
+                                            <div className="info-title-mobile"><h3>{item.title}</h3></div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {item.type === "info-desc" && (
+                                    <>
+                                        <div className="col-mobile">
+                                            <div className="info-description-mobile dashed-bottom">{item.description}</div>
+                                        </div>
+
+                                    </>
+                                )}
+
+                                {item.type === "info-void" && (
+                                    <>
+                                        <div className="col-mobile  transparent">
+
+                                        </div>
+                                    </>
+                                )}
+
 
                             </>
 

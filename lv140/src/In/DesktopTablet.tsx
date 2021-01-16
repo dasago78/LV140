@@ -22,31 +22,33 @@ class DesktopTablet extends React.Component<any, any> {
 
 
         this.setState({
-            data: data
+            data: data, windowWidth: window.innerWidth
         });
 
 
     }
     flip(order: number) {
+
         this.setState({
             itemToFlip: order
         });
     }
     flipClick(order: number) {
-        if (this.state.itemToFlip === order){
-            order=0;
+        if (this.state.itemToFlip === order) {
+            order = 0;
         }
         this.setState({
             itemToFlip: order
         });
     }
     unflip() {
+
         this.setState({
             itemToFlip: 0
         });
     }
 
-   
+
 
     render() {
 
@@ -55,7 +57,7 @@ class DesktopTablet extends React.Component<any, any> {
         return (
             <>
 
-                <div className={this.state.windowWidth >= 990 ? "desktop-container" : "tablet-container"}>
+                <div className={this.state.windowWidth >= 990 ? "tablet-container" : "tablet-container"}>
                     <div className="row">
 
                         {this.state.data.map((item: any) =>
@@ -67,13 +69,21 @@ class DesktopTablet extends React.Component<any, any> {
                                             <ReactCardFlip isFlipped={this.state.itemToFlip === item.order ? true : false} flipDirection="horizontal">
                                                 <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.flip(item.order) }} onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="brand-front" >
                                                     <div className="brand-year-desktop-tablet"><h2>{item.year}</h2></div>
-                                                    <div className="brand-logo-desktop-tablet"><img className="logo" alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
+                                                    <div className="brand-logo-desktop-tablet"><img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
                                                 </div>
 
-                                                <div onMouseOut={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}  onClick={(event: React.MouseEvent<HTMLElement>) => { this.flipClick(item.order) }} className="brand-back">
-                                                <div className="brand-year-desktop-tablet"><h2>back</h2></div>
-                                                    <div className="brand-logo-desktop-tablet"><img className="logo" alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
-                                               
+                                                <div onClick={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }} className="brand-back">
+                                                    <div>
+                                                        <div className="brand-logo-desktop-tablet">
+                                                            <img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} />
+
+                                                        </div>
+                                                        <div>
+                                                            {item.description} <a href={"/" + item.name}>Saber más</a>
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
                                             </ReactCardFlip>
                                         </>
@@ -81,23 +91,28 @@ class DesktopTablet extends React.Component<any, any> {
 
                                     {item.type === "full-image" && (
                                         <>
-                                            <div className="full-image-desktop-tablet"><img alt={item.image} title={item.image} src={"./img/full-images/" + item.image + ".png"} /></div>
+                                            <div className="full-image-desktop-tablet" onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}>
+                                                <img alt={item.image} title={item.image} src={"./img/full-images/" + item.image + ".png"} />
+                                            </div>
 
                                         </>
                                     )}
 
                                     {item.type === "info" && (
                                         <>
-                                            <div className="info-title-desktop-tablet"><h3>{item.title}</h3></div>
-                                            <div className="info-description-desktop-tablet">{item.description}</div>
-                                            <div className="info-year-desktop-tablet"><h1>{item.year}</h1></div>
-
+                                            <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}>
+                                                <div className="info-title-desktop-tablet"><h3>{item.title}</h3></div>
+                                                <div className="info-description-desktop-tablet">{item.description}</div>
+                                                <div className="info-year-desktop-tablet"><h1>{item.year}</h1></div>
+                                            </div>
                                         </>
                                     )}
 
                                     {item.type === "void" && (
                                         <>
-
+                                            <div className="full" onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }}>
+                                              
+                                            </div>
                                         </>
                                     )}
 

@@ -55,9 +55,8 @@
     },
     {
         "order": 12,
-        "type": "brand",
-        "name": "correos",
-        "year": 1890
+        "type": "full-image",
+        "image": "1888"
     },
     {
         "order": 13,
@@ -71,7 +70,49 @@
     },
     {
         "order": 15,
+        "type": "void"
+    },
+    {
+        "order": 16,
         "type": "more",
         "name": "correos"
+    },
+    {
+        "order": 17,
+        "type": "snake"
+    },
+    {
+        "order": 18,
+        "type": "full-image",
+        "image": "1881"
+    },
+    {
+        "order": 19,
+        "type": "info",
+        "title": "Nace nuestra primera edición",
+        "year": 1890
+    },
+    {
+        "order": 20,
+        "type": "snake"
+    },
+    {
+        "order": 21,
+        "type": "info-void"
+    },
+    {
+        "order": 22,
+        "type": "brand",
+        "name": "correos",
+        "year": 1890
+    },
+    {
+        "order": 23,
+        "type": "snake"
+    },
+    {
+        "order": 24,
+        "type": "info-desc",
+        "description": "Lorem ipsum si amet dolore amat si et fula"
     }
 ]

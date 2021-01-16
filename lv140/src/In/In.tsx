@@ -1,6 +1,12 @@
 import React from 'react';
-import DesktopTablet from './DesktopTablet';
-import Mobile from './Mobile';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Detail from './Detail';
+
+
+
+
+import Home from './Home';
+
 
 
 class In extends React.Component<any, any> {
@@ -8,7 +14,7 @@ class In extends React.Component<any, any> {
         super(props);
 
 
-        this.state = { windowWidth: window.innerWidth };
+      
 
     }
 
@@ -16,17 +22,24 @@ class In extends React.Component<any, any> {
     render() {
         return (
             <>
-
+                <Router>
                 <div className="header">
                     <div className="logo-lv"><img alt="LV140" title="LV140" src="./img/logo.png" /></div>
                 </div>
 
-                <div className="content">
-                    {this.state.windowWidth >= 3670 && <DesktopTablet />}
+               
+                        <Route exact path="/" component={Home} />
+                        
+                     
+                        <Route exact path="/:id" render={(props) => (
+                                <Detail {...props} />
+                          
+                        )} />
+                        
 
-           
-                    {this.state.windowWidth < 3670 && <Mobile />}
-                </div>
+
+
+                </Router>
             </>
         );
     }
