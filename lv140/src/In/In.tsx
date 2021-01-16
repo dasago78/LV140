@@ -12,10 +12,6 @@ import Home from './Home';
 class In extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
-
-
-      
-
     }
 
 
@@ -28,7 +24,7 @@ class In extends React.Component<any, any> {
                 </div>
 
                
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="" component={Home} />
                         
                      
                         <Route exact path="/:id" render={(props) => (

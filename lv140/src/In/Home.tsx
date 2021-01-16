@@ -22,10 +22,10 @@ class Home extends React.Component<any, any> {
               
 
                 <div className="content">
-                    {this.state.windowWidth >= 3670 && <DesktopTablet />}
+                    {this.state.windowWidth >= 67 && <DesktopTablet />}
 
            
-                    {this.state.windowWidth < 3670 && <Mobile />}
+                    {this.state.windowWidth < 67 && <Mobile />}
                 </div>
 
 
