@@ -66,6 +66,9 @@ h3{
   color:#001C4C;
 }
 
+.transparent{
+  background-color: transparent!important;
+}
 
 
 .content{
@@ -83,11 +86,23 @@ h3{
   padding: 0px;
   margin: 0 auto;
 }
+.mobile-container{
+  width: 376px;
+  padding: 0px;
+  margin: 0 auto;
+}
 
 .row {
   margin: 0px;
   padding: 0px;
 }
+.row-mobile {
+  margin: 0px;
+  padding: 0px;
+  height: 107px;
+  width: 376px;
+}
+
 
 
 .col-desktop-tablet {
@@ -99,12 +114,30 @@ h3{
   background-color: #ffffff;
   position: relative; 
 }
+.col-mobile {
+  margin: 0px;
+  padding: 0px;
+  width: 162px;
+  height: 100%;
+  background-color: #ffffff;
+  float:left;
+}
+.col-snake-mobile {
+  margin: 0px;
+  padding: 0px;
+  width: 52px;
+  height: 100%;
+  background-color: #ffffff;
+  float:left;
+}
 
 
 
 
 
+/**********************/
 /*items desktop tablet*/
+/**********************/
 .item-container-desktop-tablet{
   width: 100%;
   height: 100%;
@@ -137,8 +170,6 @@ h3{
 
 /*full image*/
 
-
-
 /*info*/
 .info-title-desktop-tablet{
  margin-top:30px;
@@ -156,4 +187,23 @@ h3{
 }
 
 
+/**********************/
+/*items mobile*/
+/**********************/
+.brand-logo-mobile{
+  margin-top:0px;
+}
 
+
+
+.more-mobile{
+  width: 100%;
+  height: 100%;
+  position: relative; 
+}
+
+.more-link-mobile{
+  position: absolute; 
+  bottom: 0px;
+  margin-left:80px;
+}

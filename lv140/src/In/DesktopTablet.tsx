@@ -10,7 +10,6 @@ class DesktopTablet extends React.Component<any, any> {
 
         this.state = {
             data: [],
-            isFlipped: false,
             itemToFlip: 0
         };
     }
@@ -23,8 +22,7 @@ class DesktopTablet extends React.Component<any, any> {
 
 
         this.setState({
-            data: data,
-            windowWidth: window.innerWidth
+            data: data
         });
 
 

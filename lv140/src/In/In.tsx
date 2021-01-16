@@ -22,10 +22,10 @@ class In extends React.Component<any, any> {
                 </div>
 
                 <div className="content">
-                    {this.state.windowWidth >= 370 && <DesktopTablet />}
+                    {this.state.windowWidth >= 3670 && <DesktopTablet />}
 
            
-                    {this.state.windowWidth < 370 && <Mobile />}
+                    {this.state.windowWidth < 3670 && <Mobile />}
                 </div>
             </>
         );
