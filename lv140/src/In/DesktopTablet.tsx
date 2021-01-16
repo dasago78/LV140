@@ -10,7 +10,7 @@ class DesktopTablet extends React.Component<any, any> {
 
         this.state = {
             data: [],
-            device: window.innerWidth >= 990 ? 'tablet' : 'tablet',
+            device: window.innerWidth >= 990 ? 'desktop' : 'tablet',
             itemToFlip: 0
         };
     }
