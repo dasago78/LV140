@@ -11,6 +11,7 @@ class DesktopTablet extends React.Component<any, any> {
         this.state = {
             data: [],
             device: window.innerWidth >= 990 ? 'desktop' : 'tablet',
+            touchscreen: ("ontouchstart" in document.documentElement) ? true : false,
             itemToFlip: 0
         };
     }
@@ -72,7 +73,7 @@ class DesktopTablet extends React.Component<any, any> {
                                     {item.type === "brand" && (
                                         <>
                                             <ReactCardFlip isFlipped={this.state.itemToFlip === item.order ? true : false} flipDirection="horizontal">
-                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { this.state.device === 'desktop' ? this.flip(item.order) : this.nothing()}} onClick={(event: React.MouseEvent<HTMLElement>) => { this.state.device === 'tablet' ? this.flip(item.order) :this.nothing()}} className="brand-front" >
+                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { !this.state.touchscreen ? this.flip(item.order) : this.nothing()}} onClick={(event: React.MouseEvent<HTMLElement>) => { this.state.touchscreen  ? this.flip(item.order) :this.nothing()}} className="brand-front" >
                                                     <div className="brand-year-desktop-tablet"><h2>{item.year}</h2></div>
                                                     <div className="brand-logo-desktop-tablet"><img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
                                                 </div>
