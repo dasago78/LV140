@@ -38,7 +38,7 @@
     {
         "order": 6,
         "type": "full-image",
-        "snake": "snake-bottom-dark",
+        "snake": "snake-bottom-clear",
         "image": "1888"
     },
     {
@@ -46,7 +46,7 @@
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 8,
@@ -91,14 +91,14 @@
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 15,
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 16,

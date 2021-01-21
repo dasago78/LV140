@@ -3,7 +3,7 @@
         "order": 1,
         "type": "brand",
         "name": "correos",
-        "year": 1890,
+        "year": 1716,
         "description": "Lorem ipsum si amet dolore amat si et fula",
         "snake": "snake-bottom-clear"
     
@@ -53,7 +53,7 @@
     {
         "order": 8,
         "type": "full-image",
-        "snake": "snake-bottom-dark",
+        "snake": "snake-bottom-clear",
         "image": "1888"
     },
     {
@@ -61,21 +61,21 @@
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 10,
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 11,
         "type": "brand",
         "name": "correos",
         "year": 1899,
-        "snake": "snake-bottom-dark"
+        "snake": "snake-bottom-clear"
     },
     {
         "order": 12,
