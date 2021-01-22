@@ -20,7 +20,7 @@ class In extends React.Component<any, any> {
             <>
                 <Router>
                 <div className="header">
-                    <div className="logo-lv"><img alt="LV140" title="LV140" src="../img/logo.png" /></div>
+                    <div className="logo-lv"><img alt="LV140" title="LV140" src="./img/logo.png" /></div>
                 </div>
 
                
