@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCardFlip from "react-card-flip"; //https://www.npmjs.com/package/react-card-flip
 import dataDesktop from '../data/desktop.json';
 import dataTablet from '../data/tablet.json';
+import TextHeader from './TextHeader';
 
 
 class DesktopTablet extends React.Component<any, any> {
@@ -34,8 +35,8 @@ class DesktopTablet extends React.Component<any, any> {
                 itemToFlip: order
             });
         }
-        else{
-        
+        else {
+
             if (this.state.itemToFlip === order) {
                 order = 0;
             }
@@ -44,7 +45,7 @@ class DesktopTablet extends React.Component<any, any> {
             });
         }
     }
-   
+
     unflip() {
 
         this.setState({
@@ -64,7 +65,14 @@ class DesktopTablet extends React.Component<any, any> {
         return (
             <>
                 <div className={this.state.device === 'desktop' ? "desktop-container" : "tablet-container"}>
-                    <div className="row">
+
+
+                   <TextHeader></TextHeader>
+
+    
+
+
+                    <div className="row mt-5">
 
                         {this.state.data.map((item: any) =>
                             <div className="col-desktop-tablet" key={item.order}>
@@ -73,7 +81,7 @@ class DesktopTablet extends React.Component<any, any> {
                                     {item.type === "brand" && (
                                         <>
                                             <ReactCardFlip isFlipped={this.state.itemToFlip === item.order ? true : false} flipDirection="horizontal">
-                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { !this.state.touchscreen ? this.flip(item.order) : this.nothing()}} onClick={(event: React.MouseEvent<HTMLElement>) => { this.state.touchscreen  ? this.flip(item.order) :this.nothing()}} className="brand-front" >
+                                                <div onMouseEnter={(event: React.MouseEvent<HTMLElement>) => { !this.state.touchscreen ? this.flip(item.order) : this.nothing() }} onClick={(event: React.MouseEvent<HTMLElement>) => { this.state.touchscreen ? this.flip(item.order) : this.nothing() }} className="brand-front" >
                                                     <div className="brand-year-desktop-tablet"><h2>{item.year}</h2></div>
                                                     <div className="brand-logo-desktop-tablet"><img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} /></div>
                                                 </div>
@@ -81,13 +89,15 @@ class DesktopTablet extends React.Component<any, any> {
                                                 <div onClick={(event: React.MouseEvent<HTMLElement>) => { this.unflip() }} className="brand-back">
                                                     <div>
                                                         <div className="brand-logo-desktop-tablet">
-                                                            <img alt={item.name} title={item.name} src={"./img/logos/" + item.name + ".png"} />
+                                                            <img alt={item.name} title={item.name} className="logo-back" src={"./img/logos/" + item.name + "2.png"} />
 
                                                         </div>
+                                                        <div className="brand-description-desktop-tablet">
+                                                            {item.description} </div>
                                                         <div>
-                                                            {item.description} <a href={"/" + item.name}>Saber más</a>
+                                                            <p className="text-right"><a href={"/" + item.name} className="link-mini">SABER MÁS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></a>
+                                                            </p>
                                                         </div>
-
                                                     </div>
 
                                                 </div>

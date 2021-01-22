@@ -4,6 +4,7 @@
         "type": "brand",
         "name": "correos",
         "year": 1890,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la 100.",
         "snake": "snake-bottom-clear"
     
     },

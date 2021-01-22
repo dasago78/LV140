@@ -3,7 +3,8 @@
         "order": 1,
         "type": "brand",
         "name": "correos",
-        "year": 1890
+        "year": 1890,
+        "position": "L"
     
     },
     {
@@ -16,8 +17,7 @@
     },
     {
         "order": 4,
-        "type": "more",
-        "name": "correos"
+        "type": "void"
     },
     {
         "order": 5,
@@ -27,13 +27,15 @@
         "order": 6,
         "type": "brand",
         "name": "correos",
-        "year": 1890
+        "year": 1890,
+        "position": "R"
     },
     {
         "order": 7,
         "type": "brand",
         "name": "correos",
-        "year": 1890
+        "year": 1890,
+        "position": "L"
     },
     {
         "order": 8,
@@ -41,13 +43,11 @@
     },
     {
         "order": 9,
-        "type": "more",
-        "name": "correos"
+        "type": "void"
     },
     {
         "order": 10,
-        "type": "more",
-        "name": "correos"
+        "type": "void"
     },
     {
         "order": 11,
@@ -62,7 +62,8 @@
         "order": 13,
         "type": "brand",
         "name": "correos",
-        "year": 1890
+        "year": 1890,
+        "position": "L"
     },
     {
         "order": 14,
@@ -104,7 +105,8 @@
         "order": 22,
         "type": "brand",
         "name": "correos",
-        "year": 1890
+        "year": 1890,
+        "position": "L"
     },
     {
         "order": 23,

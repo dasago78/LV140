@@ -19,12 +19,16 @@ class Home extends React.Component<any, any> {
     render() {
         return (
             <>
-              
+
 
                 <div className="content">
+
+                 
+                  
+                   
                     {this.state.windowWidth >= 670 && <DesktopTablet />}
 
-           
+
                     {this.state.windowWidth < 670 && <Mobile />}
                 </div>
 
